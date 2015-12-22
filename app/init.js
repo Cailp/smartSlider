@@ -12,8 +12,8 @@ function createSlider(parentNode, sliders, height, width) {
 
     for(var i = 0; i<sliders.length; i++){
         var j = i;
-        var slider = c.Slider();
-        ul.appendChild(slider.ele());
+        var slider = new c.Slider();
+        ul.appendChild(slider.item);
         slider.img( sliders[j] );
         slider.className(j);
     }
