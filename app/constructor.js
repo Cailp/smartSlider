@@ -1,4 +1,4 @@
- var Slider = {
+var Slider = {
     ele : function () {
         this.item = document.createElement('LI');
         this.img = function (url) {
@@ -11,10 +11,10 @@
 
     }
 };
- Slider.ele.prototype.init = function () {
-     this.item.style.position = 'absolute';
-     this.item.style.listStyle = 'none';
-     this.item.style.width = '100%';
-     this.item.style.height = '100%';
- };
- module.exports = Slider;
+Slider.ele.prototype.init = function () {
+    this.item.style.position = 'absolute';
+    this.item.style.listStyle = 'none';
+    this.item.style.width = '100%';
+    this.item.style.height = '100%';
+};
+module.exports = Slider;
