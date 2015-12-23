@@ -76,7 +76,17 @@ var animate = {
             clearInterval(autoRun);
             start(1);
             autoRun = setInterval(start, time);
-        })
+        });
+
+        var obj = {};
+        obj.clear = function(){
+            clearInterval(autoRun);
+        };
+        obj.continue = function(){
+            autoRun = setInterval(start, time);
+        };
+        return obj;
+
     }
 };
 module.exports = animate;

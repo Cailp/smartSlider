@@ -15,7 +15,6 @@ var init = {
             slider.init();
             ul.appendChild(slider.item);
             slider.img(sliders[j]);
-            //slider.className(j);
             ul.childSlider.push(slider);
         }
         console.log (ul.childSlider);
