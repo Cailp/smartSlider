@@ -1,4 +1,5 @@
 var init = require('./app/init.js');
+var animate = require('./app/animate.js');
 
 //test
 var sliders = [
@@ -19,7 +20,8 @@ function toResize(){
         height: [160,330,425,474,500]
     };
     init.sliderResize(testSlider,breakPoints);
-};
+    animate.opacity(testSlider.childSlider, 5000);
+}
 
 toResize();
 window.addEventListener('resize', toResize);

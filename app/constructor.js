@@ -16,5 +16,6 @@ Slider.ele.prototype.init = function () {
     this.item.style.listStyle = 'none';
     this.item.style.width = '100%';
     this.item.style.height = '100%';
+    this.item.style.opacity = 1;
 };
 module.exports = Slider;

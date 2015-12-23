@@ -4,6 +4,7 @@ var init = {
     createSlider: function(parentNode,sliders) {
         var ul = document.createElement('UL');
         parentNode.appendChild(ul);
+        ul.childSlider = [];
         ul.style.position = 'relative';
         ul.style.padding = '0';
         ul.style.margin = '0';
@@ -14,8 +15,10 @@ var init = {
             slider.init();
             ul.appendChild(slider.item);
             slider.img(sliders[j]);
-            slider.className(j);
+            //slider.className(j);
+            ul.childSlider.push(slider);
         }
+        console.log (ul.childSlider);
         return ul;
     },
 
