@@ -1,6 +1,6 @@
 var Slider = require('./constructor.js');
 
-var slider = {
+var init = {
     createSlider: function(parentNode,sliders) {
         var ul = document.createElement('UL');
         parentNode.appendChild(ul);
@@ -34,4 +34,4 @@ var slider = {
     }
 
 };
-module.exports = slider;
+module.exports = init;
