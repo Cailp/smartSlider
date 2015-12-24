@@ -4,13 +4,21 @@ var fonts = {
         var getColor;
         !size ? getSize = 1 : getSize = size;
         !color ? getColor = "#000000" : getColor = color;
-        var div = document.createElement('DIV');
-        var setCanvas = document.createElement('canvas');
-        parent.appendChild(div);
-        div.appendChild(setCanvas);
-        setCanvas.setAttribute('class','ss-arrow');
-
-        var canvas = document.getElementsByClassName('ss-arrow')[0];
+        var can = function() {
+            var div = document.createElement('DIV');
+            var setCanvas = document.createElement('canvas');
+            parent.appendChild(div);
+            div.appendChild(setCanvas);
+            div.style.textAlign = 'center';
+            div.style.position = 'absolute';
+            setCanvas.setAttribute('class', 'ss-arrow');
+            setCanvas.setAttribute('width', 150 * getSize);
+            setCanvas.setAttribute('height', 100 * getSize);
+            return setCanvas;
+        };
+        var canvas = can();
+        var top = parent.clientHeight / 2 - canvas.parentNode.clientHeight / 2;
+        canvas.parentNode.style.top = top + 'px';
         if(canvas.getContext){
             var thisFont = canvas.getContext('2d');
             thisFont.beginPath();
@@ -37,7 +45,7 @@ var fonts = {
             thisFont.fillStyle = getColor;
             thisFont.fill();
         }
-        return div;
     }
     //example : fonts.arrow(body,'left',2,'red');
 };
+module.exports = fonts;

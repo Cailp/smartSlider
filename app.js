@@ -1,5 +1,8 @@
 var init = require('./app/init.js');
 var animate = require('./app/animate.js');
+var buttons = require('./app/buttons.js');
+
+//need params:sliders,parentNode,animate,breakPoints,cycleTime,ButtonStyle;
 
 //test
 var sliders = [
@@ -33,6 +36,7 @@ function toResize(){
         }
     }
     body.addEventListener('keydown',c);
+    buttons.clickSwitchX();
 }
 
 toResize();
