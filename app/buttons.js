@@ -34,8 +34,8 @@ var buttons = {
             buttonList.push(prev);
             return buttonList;
         })();
-        var leftArrow = font.arrow(buttonList[1],'left',1,'#fff');
-        var rightArrow = font.arrow(buttonList[0],'right',1,'#fff');
+        font.arrow(buttonList[1],'left',1,'#fff');
+        font.arrow(buttonList[0],'right',1,'#fff');
         buttonList[1].style.position = 'absolute';
         buttonList[0].style.position = 'absolute';
         (function() {
