@@ -17,7 +17,6 @@ var init = {
             slider.img(sliders[j]);
             ul.childSlider.push(slider);
         }
-        console.log (ul.childSlider);
         return ul;
     },
 
