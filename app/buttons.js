@@ -6,26 +6,28 @@ var buttons = {
         var getUl = document.getElementsByClassName('ss-ul')[0];
         var buttonList = (function() {
             var buttonList = [];
-            var next = document.createElement('div');
-            next.className = 'next';
-            next.style.position = 'absolute';
-            next.style.right = '0';
-            next.style.width = '20%';
-            next.style.height = '100%';
-            next.style.background = 'rgba(0,0,0,0.5)';
-            next.style.zIndex = '10';
-            next.style.opacity = '0';
-            next.style.cursor = 'pointer';
-            var prev = document.createElement('prev');
-            prev.className = 'prev';
-            prev.style.position = 'absolute';
-            prev.style.left = '0';
-            prev.style.width = '20%';
-            prev.style.height = '100%';
-            prev.style.background = 'rgba(0,0,0,0.5)';
-            prev.style.zIndex = '10';
-            prev.style.opacity = '0';
-            prev.style.cursor = 'pointer';
+            function createBtn (direction){
+                var ele = document.createElement('div');
+                ele.className = 'next';
+                ele.style.position = 'absolute';
+                ele.style.width = '20%';
+                ele.style.height = '100%';
+                ele.style.background = 'rgba(0,0,0,0.5)';
+                ele.style.zIndex = '10';
+                ele.style.opacity = '0';
+                ele.style.cursor = 'pointer';
+                switch (direction) {
+                    case 'left':
+                        ele.style.left = 0;
+                        break;
+                    case 'right':
+                        ele.style.right = 0;
+                        break;
+                }
+                return ele;
+            }
+            var next = createBtn('right');
+            var prev = createBtn('left');
             getUl.appendChild(next);
             getUl.insertBefore(prev, getUl.childNodes[0]);
             buttonList.push(next);
