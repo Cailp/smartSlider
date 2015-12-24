@@ -2,6 +2,7 @@ var font = require('./font.js');
 
 var buttons = {
     clickSwitchX : function(){
+        var obj = {};
         var getUl = document.getElementsByClassName('ss-ul')[0];
         var buttonList = (function() {
             var buttonList = [];
@@ -49,6 +50,9 @@ var buttons = {
                 buttonList[0].style.opacity = '0';
             });
         })();
+        obj.left  = buttonList[1];
+        obj.right = buttonList[0];
+        return obj;
     }
 };
 

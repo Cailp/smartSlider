@@ -36,7 +36,13 @@ function toResize(){
         }
     }
     body.addEventListener('keydown',c);
-    buttons.clickSwitchX();
+    var btn = buttons.clickSwitchX();
+    btn.left.addEventListener('click',function(){
+        ani.prev();
+    });
+    btn.right.addEventListener('click',function(){
+        ani.next();
+    })
 }
 
 toResize();

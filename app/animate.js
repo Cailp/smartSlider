@@ -71,12 +71,12 @@ var animate = {
         var autoRun = setInterval(start, time);
 
 
-        var body = document.getElementsByTagName('body')[0];
-        body.addEventListener('click', function(){
-            clearInterval(autoRun);
-            start(1);
-            autoRun = setInterval(start, time);
-        });
+        //var body = document.getElementsByTagName('body')[0];
+        //body.addEventListener('click', function(){
+        //    clearInterval(autoRun);
+        //    start(1);
+        //    autoRun = setInterval(start, time);
+        //});
 
         var obj = {};
         obj.clear = function(){
@@ -84,6 +84,16 @@ var animate = {
         };
         obj.continue = function(){
             autoRun = setInterval(start, time);
+        };
+        obj.prev = function(){
+            clearInterval(autoRun);
+            start(1);
+            autoRun = setInterval(start,time);
+        };
+        obj.next = function(){
+            clearInterval(autoRun);
+            start();
+            autoRun = setInterval(start,time);
         };
         return obj;
 
