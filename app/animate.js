@@ -83,6 +83,7 @@ var animate = {
             clearInterval(autoRun);
         };
         obj.continue = function(){
+            start();
             autoRun = setInterval(start, time);
         };
         obj.prev = function(){
