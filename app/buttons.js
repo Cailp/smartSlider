@@ -35,7 +35,6 @@ var buttons = {
         var rightArrow = font.arrow(buttonList[0],'right',1,'#fff');
         buttonList[1].style.position = 'absolute';
         buttonList[0].style.position = 'absolute';
-        console.log(buttonList);
         (function() {
             buttonList[1].addEventListener('mouseover', function () {
                 buttonList[1].style.opacity = '1';

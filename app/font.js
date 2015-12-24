@@ -19,6 +19,8 @@ var fonts = {
         var canvas = can();
         var top = parent.clientHeight / 2 - canvas.parentNode.clientHeight / 2;
         canvas.parentNode.style.top = top + 'px';
+        var left = parent.clientWidth / 2 - canvas.parentNode.clientWidth / 2;
+        canvas.parentNode.style.left = left + 'px';
         if(canvas.getContext){
             var thisFont = canvas.getContext('2d');
             thisFont.beginPath();
