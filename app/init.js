@@ -8,6 +8,7 @@ var init = {
         ul.style.position = 'relative';
         ul.style.padding = '0';
         ul.style.margin = '0';
+        ul.style.overflow = 'hidden';
         ul.setAttribute('class','ss-ul');
 
         for (var i = 0; i < sliders.length; i++) {
