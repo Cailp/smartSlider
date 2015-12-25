@@ -28,7 +28,7 @@ var fonts = {
                 case 'left' :
                     break;
                 case 'right' :
-                    thisFont.translate(125*getSize, 100*getSize);
+                    thisFont.translate(150*getSize, 100*getSize);
                     thisFont.rotate(180*Math.PI/180);
                     break;
                 case 'top' :

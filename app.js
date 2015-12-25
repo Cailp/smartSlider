@@ -19,14 +19,14 @@ var breakPoints = {
 };
 
 //var body = document.getElementsByTagName('body')[0];
-var body = document.getElementsByClassName('app')[0];
-var testSlider = init.createSlider(body, sliders);
+var parent = document.getElementsByClassName('app')[0];
+var getSlider = init.createSlider(parent, sliders);
 
 function toResize(){
-    body.removeChild(testSlider);
-    testSlider = init.createSlider(body, sliders);
-    init.sliderResize(testSlider,breakPoints);
-    var ani = animate.opacity(testSlider.childSlider, 5000);
+    parent.removeChild(getSlider);
+    getSlider = init.createSlider(parent, sliders);
+    init.sliderResize(getSlider,breakPoints);
+    var ani = animate.opacity(getSlider.childSlider, 5000);
     function c(){
         //press p to pause and press c to continue
         if(event.keyCode === 80) {
